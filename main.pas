@@ -3,7 +3,8 @@ unit main;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Menus,
   FMX.StdCtrls, FMX.Controls.Presentation, FMX.Edit, FMX.Objects,
   FMX.Memo.Types, FMX.ScrollBox, FMX.Memo;
@@ -19,26 +20,33 @@ type
     R_decryption: TRectangle;
     R_encryption: TRectangle;
     Label4: TLabel;
-    Edit1: TEdit;
-    Memo2: TMemo;
+    encrption_key: TEdit;
+    encryption_text: TMemo;
     Memo3: TMemo;
-    Memo1: TMemo;
-    Button2: TButton;
-    Button1: TButton;
-    Label5: TLabel;
+    encryption_encrypted: TMemo;
+    encryption_clear: TButton;
+    encrypt: TButton;
+    version: TLabel;
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
-    Edit2: TEdit;
-    Memo4: TMemo;
+    decryption_key: TEdit;
+    decryption_text: TMemo;
     Memo5: TMemo;
-    Memo6: TMemo;
-    Button3: TButton;
-    Button4: TButton;
-    Label9: TLabel;
-    Label10: TLabel;
-    procedure Button1Click(Sender: TObject);
-    procedure Memo1Click(Sender: TObject);
+    decryption_decrypted: TMemo;
+    decryption_clear: TButton;
+    decrypt: TButton;
+    company: TLabel;
+    author: TLabel;
+    encryption_encrypted_copy: TButton;
+    decryption_decrypted_copy: TButton;
+    encryption_text_copy: TButton;
+    encrption_key_copy: TButton;
+    decryption_text_copy: TButton;
+    decryption_key_copy: TButton;
+    procedure encryption_encryptedClick(Sender: TObject);
+    procedure encryption_encrypted_copyClick(Sender: TObject);
+    procedure encrption_keyClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,23 +56,27 @@ type
 var
   FormMain: TFormMain;
 
-
-
 implementation
 
 {$R *.fmx}
 
 uses
-   FMX.Clipboard;
+  FMX.Clipboard;
 
-procedure TFormMain.Button1Click(Sender: TObject);
+procedure TFormMain.encryption_encrypted_copyClick(Sender: TObject);
 begin
-  Memo1.Text := 'sssssssssaddddlkansdjknajskdassjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkdddddddd';
+  encryption_encrypted.SelectAll;
+  encryption_encrypted.CopyToClipboard();
 end;
 
-procedure TFormMain.Memo1Click(Sender: TObject);
+procedure TFormMain.encrption_keyClick(Sender: TObject);
 begin
-  Memo1.SelectAll;
+  encrption_key.SelectAll;
+end;
+
+procedure TFormMain.encryption_encryptedClick(Sender: TObject);
+begin
+  encryption_encrypted.SelectAll;
 
 end;
 

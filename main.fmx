@@ -15,7 +15,7 @@ object FormMain: TFormMain
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
     Stroke.Thickness = 0.100000001490116100
-    object Label5: TLabel
+    object version: TLabel
       Align = Left
       Size.Width = 200.000000000000000000
       Size.Height = 50.000000000000000000
@@ -24,7 +24,7 @@ object FormMain: TFormMain
       Text = 'V1.0'
       TabOrder = 2
     end
-    object Label9: TLabel
+    object company: TLabel
       Align = Center
       Size.Width = 200.000000000000000000
       Size.Height = 50.000000000000000000
@@ -33,7 +33,7 @@ object FormMain: TFormMain
       Text = 'Nar Technology'
       TabOrder = 1
     end
-    object Label10: TLabel
+    object author: TLabel
       Align = Right
       Position.X = 800.000000000000000000
       Size.Width = 200.000000000000000000
@@ -109,7 +109,7 @@ object FormMain: TFormMain
       Text = 'Decrpyted Text'
       TabOrder = 6
     end
-    object Edit2: TEdit
+    object decryption_key: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 1
       MaxLength = 16
@@ -122,7 +122,7 @@ object FormMain: TFormMain
       Size.PlatformDefault = False
       StyledSettings = [Style, FontColor]
     end
-    object Memo4: TMemo
+    object decryption_text: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
       DataDetectorTypes = []
       StyledSettings = [Style, FontColor]
@@ -135,7 +135,7 @@ object FormMain: TFormMain
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 7
-      OnClick = Memo1Click
+      OnClick = encryption_encryptedClick
       Viewport.Width = 309.000000000000000000
       Viewport.Height = 116.000000000000000000
       object Memo5: TMemo
@@ -148,12 +148,12 @@ object FormMain: TFormMain
         Size.Height = 120.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 11
-        OnClick = Memo1Click
+        OnClick = encryption_encryptedClick
         Viewport.Width = 309.000000000000000000
         Viewport.Height = 116.000000000000000000
       end
     end
-    object Memo6: TMemo
+    object decryption_decrypted: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
       DataDetectorTypes = []
       StyledSettings = [Style, FontColor]
@@ -166,17 +166,17 @@ object FormMain: TFormMain
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 8
-      OnClick = Memo1Click
+      OnClick = encryption_encryptedClick
       Viewport.Width = 309.000000000000000000
       Viewport.Height = 116.000000000000000000
     end
-    object Button3: TButton
+    object decryption_clear: TButton
       Position.X = 290.000000000000000000
       Position.Y = 400.000000000000000000
       TabOrder = 2
       Text = 'Clear'
     end
-    object Button4: TButton
+    object decrypt: TButton
       Position.X = 400.000000000000000000
       Position.Y = 400.000000000000000000
       Size.Width = 80.000000000000000000
@@ -184,7 +184,27 @@ object FormMain: TFormMain
       Size.PlatformDefault = False
       TabOrder = 3
       Text = 'Decrypt'
-      OnClick = Button1Click
+    end
+    object decryption_decrypted_copy: TButton
+      Position.X = 65.000000000000000000
+      Position.Y = 333.000000000000000000
+      TabOrder = 12
+      Text = 'Copy'
+      OnClick = encryption_encrypted_copyClick
+    end
+    object decryption_text_copy: TButton
+      Position.X = 65.000000000000000000
+      Position.Y = 188.000000000000000000
+      TabOrder = 11
+      Text = 'Copy'
+      OnClick = encryption_encrypted_copyClick
+    end
+    object decryption_key_copy: TButton
+      Position.X = 65.000000000000000000
+      Position.Y = 43.000000000000000000
+      TabOrder = 10
+      Text = 'Copy'
+      OnClick = encryption_encrypted_copyClick
     end
   end
   object R_encryption: TRectangle
@@ -222,7 +242,7 @@ object FormMain: TFormMain
       Text = 'Encrpyted Text'
       TabOrder = 6
     end
-    object Edit1: TEdit
+    object encrption_key: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 1
       MaxLength = 16
@@ -234,8 +254,9 @@ object FormMain: TFormMain
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Style, FontColor]
+      OnClick = encrption_keyClick
     end
-    object Memo2: TMemo
+    object encryption_text: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
       DataDetectorTypes = []
       StyledSettings = [Style, FontColor]
@@ -248,7 +269,7 @@ object FormMain: TFormMain
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 7
-      OnClick = Memo1Click
+      OnClick = encryption_encryptedClick
       Viewport.Width = 309.000000000000000000
       Viewport.Height = 116.000000000000000000
       object Memo3: TMemo
@@ -261,12 +282,12 @@ object FormMain: TFormMain
         Size.Height = 120.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 11
-        OnClick = Memo1Click
-        Viewport.Width = 313.000000000000000000
-        Viewport.Height = 120.000000000000000000
+        OnClick = encryption_encryptedClick
+        Viewport.Width = 309.000000000000000000
+        Viewport.Height = 116.000000000000000000
       end
     end
-    object Memo1: TMemo
+    object encryption_encrypted: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
       DataDetectorTypes = []
       StyledSettings = [Style, FontColor]
@@ -279,17 +300,17 @@ object FormMain: TFormMain
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 8
-      OnClick = Memo1Click
+      OnClick = encryption_encryptedClick
       Viewport.Width = 309.000000000000000000
       Viewport.Height = 116.000000000000000000
     end
-    object Button2: TButton
+    object encryption_clear: TButton
       Position.X = 290.000000000000000000
       Position.Y = 400.000000000000000000
       TabOrder = 2
       Text = 'Clear'
     end
-    object Button1: TButton
+    object encrypt: TButton
       Position.X = 400.000000000000000000
       Position.Y = 400.000000000000000000
       Size.Width = 80.000000000000000000
@@ -297,7 +318,27 @@ object FormMain: TFormMain
       Size.PlatformDefault = False
       TabOrder = 3
       Text = 'Encrypt'
-      OnClick = Button1Click
+    end
+    object encryption_encrypted_copy: TButton
+      Position.X = 65.000000000000000000
+      Position.Y = 333.000000000000000000
+      TabOrder = 12
+      Text = 'Copy'
+      OnClick = encryption_encrypted_copyClick
+    end
+    object encryption_text_copy: TButton
+      Position.X = 65.000000000000000000
+      Position.Y = 188.000000000000000000
+      TabOrder = 11
+      Text = 'Copy'
+      OnClick = encryption_encrypted_copyClick
+    end
+    object encrption_key_copy: TButton
+      Position.X = 65.000000000000000000
+      Position.Y = 43.000000000000000000
+      TabOrder = 10
+      Text = 'Copy'
+      OnClick = encryption_encrypted_copyClick
     end
   end
 end
