@@ -14,14 +14,33 @@ object FormMain: TFormMain
     Size.Width = 1000.000000000000000000
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
-    Stroke.Kind = None
+    Stroke.Thickness = 0.100000001490116100
     object Label5: TLabel
-      Align = Client
-      Size.Width = 1000.000000000000000000
+      Align = Left
+      Size.Width = 200.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
       TextSettings.HorzAlign = Center
-      Text = 'V1.0 Mustafa FENERC'#304' Nar Teknoloji'
+      Text = 'V1.0'
+      TabOrder = 2
+    end
+    object Label9: TLabel
+      Align = Center
+      Size.Width = 200.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Nar Technology'
+      TabOrder = 1
+    end
+    object Label10: TLabel
+      Align = Right
+      Position.X = 800.000000000000000000
+      Size.Width = 200.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'fenergy'
       TabOrder = 0
     end
   end
@@ -30,7 +49,7 @@ object FormMain: TFormMain
     Size.Width = 1000.000000000000000000
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
-    Stroke.Kind = None
+    Stroke.Thickness = 0.100000001490116100
     object top_msg: TLabel
       Align = Client
       StyledSettings = [FontColor]
@@ -56,21 +75,129 @@ object FormMain: TFormMain
   end
   object R_decryption: TRectangle
     Align = Right
+    Fill.Color = xFFC6C6C6
     Position.X = 500.000000000000000000
     Position.Y = 50.000000000000000000
     Size.Width = 500.000000000000000000
     Size.Height = 500.000000000000000000
     Size.PlatformDefault = False
+    Stroke.Thickness = 0.100000001490116100
+    object Label6: TLabel
+      Position.X = 25.000000000000000000
+      Position.Y = 25.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Key'
+      TabOrder = 0
+    end
+    object Label7: TLabel
+      Position.X = 25.000000000000000000
+      Position.Y = 90.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Encrpyted Text'
+      TabOrder = 9
+    end
+    object Label8: TLabel
+      Position.X = 25.000000000000000000
+      Position.Y = 235.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Decrpyted Text'
+      TabOrder = 6
+    end
+    object Edit2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      MaxLength = 16
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 14.000000000000000000
+      Position.X = 170.000000000000000000
+      Position.Y = 25.000000000000000000
+      Size.Width = 313.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Style, FontColor]
+    end
+    object Memo4: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      StyledSettings = [Style, FontColor]
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.WordWrap = True
+      Position.X = 170.000000000000000000
+      Position.Y = 90.000000000000000000
+      Size.Width = 313.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      OnClick = Memo1Click
+      Viewport.Width = 309.000000000000000000
+      Viewport.Height = 116.000000000000000000
+      object Memo5: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        TextSettings.WordWrap = True
+        Position.X = 76.000000000000000000
+        Position.Y = 126.000000000000000000
+        Size.Width = 313.000000000000000000
+        Size.Height = 120.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 11
+        OnClick = Memo1Click
+        Viewport.Width = 309.000000000000000000
+        Viewport.Height = 116.000000000000000000
+      end
+    end
+    object Memo6: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      StyledSettings = [Style, FontColor]
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.WordWrap = True
+      Position.X = 170.000000000000000000
+      Position.Y = 235.000000000000000000
+      Size.Width = 313.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      OnClick = Memo1Click
+      Viewport.Width = 309.000000000000000000
+      Viewport.Height = 116.000000000000000000
+    end
+    object Button3: TButton
+      Position.X = 290.000000000000000000
+      Position.Y = 400.000000000000000000
+      TabOrder = 2
+      Text = 'Clear'
+    end
+    object Button4: TButton
+      Position.X = 400.000000000000000000
+      Position.Y = 400.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Decrypt'
+      OnClick = Button1Click
+    end
   end
   object R_encryption: TRectangle
     Align = Left
+    Fill.Color = xFFC6C6C6
     Position.Y = 50.000000000000000000
     Size.Width = 500.000000000000000000
     Size.Height = 500.000000000000000000
     Size.PlatformDefault = False
+    Stroke.Thickness = 0.100000001490116100
     object Label1: TLabel
-      Position.X = 24.000000000000000000
-      Position.Y = 92.000000000000000000
+      Position.X = 25.000000000000000000
+      Position.Y = 90.000000000000000000
       Size.Width = 57.000000000000000000
       Size.Height = 29.000000000000000000
       Size.PlatformDefault = False
@@ -78,8 +205,8 @@ object FormMain: TFormMain
       TabOrder = 9
     end
     object Label2: TLabel
-      Position.X = 24.000000000000000000
-      Position.Y = 26.000000000000000000
+      Position.X = 25.000000000000000000
+      Position.Y = 25.000000000000000000
       Size.Width = 57.000000000000000000
       Size.Height = 23.000000000000000000
       Size.PlatformDefault = False
@@ -87,8 +214,8 @@ object FormMain: TFormMain
       TabOrder = 0
     end
     object Label4: TLabel
-      Position.X = 24.000000000000000000
-      Position.Y = 233.000000000000000000
+      Position.X = 25.000000000000000000
+      Position.Y = 235.000000000000000000
       Size.Width = 121.000000000000000000
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
@@ -98,18 +225,25 @@ object FormMain: TFormMain
     object Edit1: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 1
-      Position.X = 168.000000000000000000
-      Position.Y = 26.000000000000000000
+      MaxLength = 16
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 14.000000000000000000
+      Position.X = 170.000000000000000000
+      Position.Y = 25.000000000000000000
       Size.Width = 313.000000000000000000
-      Size.Height = 38.000000000000000000
+      Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
+      StyledSettings = [Style, FontColor]
     end
     object Memo2: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
       DataDetectorTypes = []
+      StyledSettings = [Style, FontColor]
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 14.000000000000000000
       TextSettings.WordWrap = True
-      Position.X = 168.000000000000000000
-      Position.Y = 92.000000000000000000
+      Position.X = 170.000000000000000000
+      Position.Y = 90.000000000000000000
       Size.Width = 313.000000000000000000
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
@@ -128,16 +262,19 @@ object FormMain: TFormMain
         Size.PlatformDefault = False
         TabOrder = 11
         OnClick = Memo1Click
-        Viewport.Width = 309.000000000000000000
-        Viewport.Height = 116.000000000000000000
+        Viewport.Width = 313.000000000000000000
+        Viewport.Height = 120.000000000000000000
       end
     end
     object Memo1: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
       DataDetectorTypes = []
+      StyledSettings = [Style, FontColor]
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 14.000000000000000000
       TextSettings.WordWrap = True
-      Position.X = 168.000000000000000000
-      Position.Y = 233.000000000000000000
+      Position.X = 170.000000000000000000
+      Position.Y = 235.000000000000000000
       Size.Width = 313.000000000000000000
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
@@ -147,14 +284,14 @@ object FormMain: TFormMain
       Viewport.Height = 116.000000000000000000
     end
     object Button2: TButton
-      Position.X = 289.000000000000000000
-      Position.Y = 397.000000000000000000
+      Position.X = 290.000000000000000000
+      Position.Y = 400.000000000000000000
       TabOrder = 2
-      Text = 'Temizle'
+      Text = 'Clear'
     end
     object Button1: TButton
-      Position.X = 377.000000000000000000
-      Position.Y = 397.000000000000000000
+      Position.X = 400.000000000000000000
+      Position.Y = 400.000000000000000000
       Size.Width = 80.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
