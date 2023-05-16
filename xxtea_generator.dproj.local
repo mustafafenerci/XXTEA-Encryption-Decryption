@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/16 17:04:59.000.709,=C:\Users\MF\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/05/16 12:22:33.000.143,=C:\Users\MF\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/05/16 12:23:07.000.438,C:\Users\MF\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\MF\Desktop\xxtea\main.pas</Transaction>
+    <Transaction>2023/05/16 12:23:07.000.438,C:\Users\MF\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\MF\Desktop\xxtea\main.fmx</Transaction>
+    <Transaction>2023/05/16 12:26:12.000.001,C:\Users\MF\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\MF\Documents\xxtea_generator.dproj</Transaction>
+    <Transaction>2023/05/16 13:01:08.000.322,=C:\Users\MF\Desktop\XXTEA.pas</Transaction>
+    <Transaction>2023/05/16 13:06:24.188,=C:\Users\MF\Desktop\xxtea generator\main.pas</Transaction>
+    <Transaction>2023/05/16 13:06:35.975,=C:\Users\MF\Desktop\xxtea generator\Base64.pas</Transaction>
+    <Transaction>2023/05/16 13:06:36.033,=C:\Users\MF\Desktop\xxtea generator\XXTEA.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android64="192.168.1.18:5037"/>
+	</ActiveMobileDevice>
+</BorlandProject>

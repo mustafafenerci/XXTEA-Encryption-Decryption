@@ -1,0 +1,75 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'xxtea generator'
+  ClientHeight = 583
+  ClientWidth = 827
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Position.X = 160.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 313.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Button1: TButton
+    Position.X = 655.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Olu'#351'tur'
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    Position.X = 160.000000000000000000
+    Position.Y = 142.000000000000000000
+    Size.Width = 313.000000000000000000
+    Size.Height = 43.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Button2: TButton
+    Position.X = 584.000000000000000000
+    Position.Y = 136.000000000000000000
+    TabOrder = 4
+    Text = 'Button1'
+  end
+  object Rectangle2: TRectangle
+    Align = Bottom
+    Position.Y = 533.000000000000000000
+    Size.Width = 827.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Rectangle1: TRectangle
+    Align = Top
+    Size.Width = 827.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label2: TLabel
+    Position.X = -64.000000000000000000
+    Position.Y = 21.000000000000000000
+    Size.Width = 57.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Key'
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Position.X = 81.000000000000000000
+    Position.Y = 93.000000000000000000
+    Size.Width = 57.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Key'
+    TabOrder = 8
+  end
+end

@@ -1,0 +1,15 @@
+program xxtea_generator;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  main in '..\Desktop\xxtea\main.pas' {FormMain};
+
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TFormMain, FormMain);
+  Application.Run;
+end.
