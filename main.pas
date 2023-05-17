@@ -16,7 +16,6 @@ type
     R_footer: TRectangle;
     Label1: TLabel;
     Label2: TLabel;
-    Label3: TLabel;
     top_msg: TLabel;
     R_decryption: TRectangle;
     R_encryption: TRectangle;
@@ -51,6 +50,15 @@ type
     procedure encryption_text_copyClick(Sender: TObject);
     procedure encrption_key_copyClick(Sender: TObject);
     procedure encryption_encrypted_copyClick(Sender: TObject);
+    procedure encryption_encryptedClick(Sender: TObject);
+    procedure encryption_textClick(Sender: TObject);
+    procedure encrption_keyClick(Sender: TObject);
+    procedure decryption_keyClick(Sender: TObject);
+    procedure decryption_key_copyClick(Sender: TObject);
+    procedure decryption_text_copyClick(Sender: TObject);
+    procedure decryption_textClick(Sender: TObject);
+    procedure decryption_decryptedClick(Sender: TObject);
+    procedure decryption_decrypted_copyClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -70,6 +78,11 @@ implementation
 {$R *.fmx}
 
 
+procedure TFormMain.encryption_textClick(Sender: TObject);
+begin
+  encryption_text.SelectAll;
+end;
+
 procedure TFormMain.encryption_text_copyClick(Sender: TObject);
 begin
 
@@ -86,6 +99,44 @@ begin
   K := BytesOf(decryption_key.Text);
   DD := XXTEA.decrypt(DD, K);
   decryption_decrypted.Text := TEncoding.UTF8.GetString(DD);
+end;
+
+procedure TFormMain.decryption_decryptedClick(Sender: TObject);
+begin
+  decryption_decrypted.SelectAll;
+end;
+
+procedure TFormMain.decryption_decrypted_copyClick(Sender: TObject);
+begin
+  decryption_decrypted.SelectAll;
+  decryption_decrypted.CopyToClipboard;
+end;
+
+procedure TFormMain.decryption_keyClick(Sender: TObject);
+begin
+  decryption_key.SelectAll;
+end;
+
+procedure TFormMain.decryption_key_copyClick(Sender: TObject);
+begin
+  decryption_key.SelectAll;
+  decryption_key.CopyToClipboard;
+end;
+
+procedure TFormMain.decryption_textClick(Sender: TObject);
+begin
+  decryption_text.SelectAll;
+end;
+
+procedure TFormMain.decryption_text_copyClick(Sender: TObject);
+begin
+  decryption_text.SelectAll;
+  decryption_text.CopyToClipboard;
+end;
+
+procedure TFormMain.encrption_keyClick(Sender: TObject);
+begin
+  encrption_key.SelectAll;
 end;
 
 procedure TFormMain.encrption_key_copyClick(Sender: TObject);
@@ -109,6 +160,11 @@ begin
   encrption_key.Text := '';
   encryption_text.Text := '';
   encryption_encrypted.Text := '';
+end;
+
+procedure TFormMain.encryption_encryptedClick(Sender: TObject);
+begin
+  encryption_encrypted.SelectAll;
 end;
 
 procedure TFormMain.encryption_encrypted_copyClick(Sender: TObject);
