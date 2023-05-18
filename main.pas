@@ -44,6 +44,12 @@ type
     encrption_key_copy: TButton;
     decryption_text_copy: TButton;
     decryption_key_copy: TButton;
+    encrption_key_paste: TButton;
+    encryption_text_paste: TButton;
+    encryption_encrypted_paste: TButton;
+    decryption_key_paste: TButton;
+    decryption_text_paste: TButton;
+    decryption_decrypted_paste: TButton;
     procedure encryption_clearClick(Sender: TObject);
     procedure encryptClick(Sender: TObject);
     procedure decryptClick(Sender: TObject);
@@ -52,13 +58,12 @@ type
     procedure encryption_encrypted_copyClick(Sender: TObject);
     procedure encryption_encryptedClick(Sender: TObject);
     procedure encryption_textClick(Sender: TObject);
-    procedure encrption_keyClick(Sender: TObject);
-    procedure decryption_keyClick(Sender: TObject);
     procedure decryption_key_copyClick(Sender: TObject);
     procedure decryption_text_copyClick(Sender: TObject);
     procedure decryption_textClick(Sender: TObject);
     procedure decryption_decryptedClick(Sender: TObject);
     procedure decryption_decrypted_copyClick(Sender: TObject);
+    procedure decryption_clearClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -101,6 +106,13 @@ begin
   decryption_decrypted.Text := TEncoding.UTF8.GetString(DD);
 end;
 
+procedure TFormMain.decryption_clearClick(Sender: TObject);
+begin
+  decryption_key.Text := '';
+  decryption_text.Text := '';
+  decryption_decrypted.Text := '';
+end;
+
 procedure TFormMain.decryption_decryptedClick(Sender: TObject);
 begin
   decryption_decrypted.SelectAll;
@@ -110,11 +122,6 @@ procedure TFormMain.decryption_decrypted_copyClick(Sender: TObject);
 begin
   decryption_decrypted.SelectAll;
   decryption_decrypted.CopyToClipboard;
-end;
-
-procedure TFormMain.decryption_keyClick(Sender: TObject);
-begin
-  decryption_key.SelectAll;
 end;
 
 procedure TFormMain.decryption_key_copyClick(Sender: TObject);
@@ -132,11 +139,6 @@ procedure TFormMain.decryption_text_copyClick(Sender: TObject);
 begin
   decryption_text.SelectAll;
   decryption_text.CopyToClipboard;
-end;
-
-procedure TFormMain.encrption_keyClick(Sender: TObject);
-begin
-  encrption_key.SelectAll;
 end;
 
 procedure TFormMain.encrption_key_copyClick(Sender: TObject);

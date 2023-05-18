@@ -57,6 +57,9 @@ type
     procedure decryption_key_copyClick(Sender: TObject);
     procedure decryption_text_copyClick(Sender: TObject);
     procedure decryption_textClick(Sender: TObject);
+    procedure decryption_decryptedClick(Sender: TObject);
+    procedure decryption_decrypted_copyClick(Sender: TObject);
+    procedure decryption_clearClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -97,6 +100,24 @@ begin
   K := BytesOf(decryption_key.Text);
   DD := XXTEA.decrypt(DD, K);
   decryption_decrypted.Text := TEncoding.UTF8.GetString(DD);
+end;
+
+procedure TFormMain.decryption_clearClick(Sender: TObject);
+begin
+  decrption_key.Text := '';
+  decryption_text.Text := '';
+  decryption_encrypted.Text := '';
+end;
+
+procedure TFormMain.decryption_decryptedClick(Sender: TObject);
+begin
+  decryption_decrypted.SelectAll;
+end;
+
+procedure TFormMain.decryption_decrypted_copyClick(Sender: TObject);
+begin
+  decryption_decrypted.SelectAll;
+  decryption_decrypted.CopyToClipboard;
 end;
 
 procedure TFormMain.decryption_keyClick(Sender: TObject);

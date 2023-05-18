@@ -1,9 +1,12 @@
 object FormMain: TFormMain
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
   Caption = 'xxtea generator'
   ClientHeight = 600
   ClientWidth = 1000
+  Position = DesktopCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -111,6 +114,7 @@ object FormMain: TFormMain
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Style, FontColor]
+      OnClick = decryption_keyClick
     end
     object decryption_text: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
@@ -125,6 +129,7 @@ object FormMain: TFormMain
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 7
+      OnClick = decryption_textClick
       Viewport.Width = 309.000000000000000000
       Viewport.Height = 116.000000000000000000
       object Memo5: TMemo
@@ -154,6 +159,7 @@ object FormMain: TFormMain
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 8
+      OnClick = decryption_decryptedClick
       Viewport.Width = 309.000000000000000000
       Viewport.Height = 116.000000000000000000
     end
@@ -162,6 +168,7 @@ object FormMain: TFormMain
       Position.Y = 400.000000000000000000
       TabOrder = 2
       Text = 'Clear'
+      OnClick = decryption_clearClick
     end
     object decrypt: TButton
       Position.X = 400.000000000000000000
@@ -178,18 +185,21 @@ object FormMain: TFormMain
       Position.Y = 333.000000000000000000
       TabOrder = 12
       Text = 'Copy'
+      OnClick = decryption_decrypted_copyClick
     end
     object decryption_text_copy: TButton
       Position.X = 65.000000000000000000
       Position.Y = 188.000000000000000000
       TabOrder = 11
       Text = 'Copy'
+      OnClick = decryption_text_copyClick
     end
     object decryption_key_copy: TButton
       Position.X = 65.000000000000000000
       Position.Y = 43.000000000000000000
       TabOrder = 10
       Text = 'Copy'
+      OnClick = decryption_key_copyClick
     end
   end
   object R_encryption: TRectangle

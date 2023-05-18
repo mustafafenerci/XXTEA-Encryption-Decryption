@@ -1,9 +1,12 @@
 object FormMain: TFormMain
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
   Caption = 'xxtea generator'
   ClientHeight = 600
   ClientWidth = 1000
+  Position = DesktopCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -165,6 +168,7 @@ object FormMain: TFormMain
       Position.Y = 400.000000000000000000
       TabOrder = 2
       Text = 'Clear'
+      OnClick = decryption_clearClick
     end
     object decrypt: TButton
       Position.X = 400.000000000000000000
@@ -181,6 +185,7 @@ object FormMain: TFormMain
       Position.Y = 333.000000000000000000
       TabOrder = 12
       Text = 'Copy'
+      OnClick = decryption_decrypted_copyClick
     end
     object decryption_text_copy: TButton
       Position.X = 65.000000000000000000
