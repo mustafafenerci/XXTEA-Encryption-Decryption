@@ -92,7 +92,7 @@ object FormMain: TFormMain
       Size.Height = 36.000000000000000000
       Size.PlatformDefault = False
       Text = 'Encrpyted Text'
-      TabOrder = 9
+      TabOrder = 3
     end
     object Label8: TLabel
       Position.X = 25.000000000000000000
@@ -101,11 +101,11 @@ object FormMain: TFormMain
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
       Text = 'Decrpyted Text'
-      TabOrder = 6
+      TabOrder = 2
     end
     object decryption_key: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 1
+      TabOrder = 6
       TextSettings.Font.Family = 'Roboto'
       TextSettings.Font.Size = 14.000000000000000000
       Position.X = 170.000000000000000000
@@ -114,7 +114,6 @@ object FormMain: TFormMain
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Style, FontColor]
-      OnClick = decryption_keyClick
     end
     object decryption_text: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
@@ -128,7 +127,7 @@ object FormMain: TFormMain
       Size.Width = 313.000000000000000000
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 7
+      TabOrder = 12
       OnClick = decryption_textClick
       Viewport.Width = 309.000000000000000000
       Viewport.Height = 116.000000000000000000
@@ -158,7 +157,7 @@ object FormMain: TFormMain
       Size.Width = 313.000000000000000000
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 8
+      TabOrder = 18
       OnClick = decryption_decryptedClick
       Viewport.Width = 309.000000000000000000
       Viewport.Height = 116.000000000000000000
@@ -166,8 +165,9 @@ object FormMain: TFormMain
     object decryption_clear: TButton
       Position.X = 290.000000000000000000
       Position.Y = 400.000000000000000000
-      TabOrder = 2
+      TabOrder = 20
       Text = 'Clear'
+      OnClick = decryption_clearClick
     end
     object decrypt: TButton
       Position.X = 400.000000000000000000
@@ -175,30 +175,69 @@ object FormMain: TFormMain
       Size.Width = 80.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 3
+      TabOrder = 22
       Text = 'Decrypt'
       OnClick = decryptClick
     end
     object decryption_decrypted_copy: TButton
-      Position.X = 65.000000000000000000
+      Position.X = 60.000000000000000000
       Position.Y = 333.000000000000000000
-      TabOrder = 12
+      Size.Width = 50.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 14
       Text = 'Copy'
       OnClick = decryption_decrypted_copyClick
     end
     object decryption_text_copy: TButton
-      Position.X = 65.000000000000000000
+      Position.X = 60.000000000000000000
       Position.Y = 188.000000000000000000
-      TabOrder = 11
+      Size.Width = 50.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
       Text = 'Copy'
       OnClick = decryption_text_copyClick
     end
     object decryption_key_copy: TButton
-      Position.X = 65.000000000000000000
+      Position.X = 60.000000000000000000
       Position.Y = 43.000000000000000000
-      TabOrder = 10
+      Size.Width = 50.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
       Text = 'Copy'
       OnClick = decryption_key_copyClick
+    end
+    object decryption_key_paste: TButton
+      Position.X = 112.000000000000000000
+      Position.Y = 43.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Paste'
+      OnClick = encrption_key_copyClick
+    end
+    object decryption_text_paste: TButton
+      Position.X = 112.000000000000000000
+      Position.Y = 188.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 10
+      Text = 'Paste'
+      OnClick = encrption_key_copyClick
+    end
+    object decryption_decrypted_paste: TButton
+      Position.X = 112.000000000000000000
+      Position.Y = 333.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 16
+      Text = 'Paste'
+      OnClick = encrption_key_copyClick
     end
   end
   object R_encryption: TRectangle
@@ -216,7 +255,7 @@ object FormMain: TFormMain
       Size.Height = 29.000000000000000000
       Size.PlatformDefault = False
       Text = 'Text'
-      TabOrder = 9
+      TabOrder = 15
     end
     object Label2: TLabel
       Position.X = 25.000000000000000000
@@ -234,11 +273,11 @@ object FormMain: TFormMain
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
       Text = 'Encrpyted Text'
-      TabOrder = 6
+      TabOrder = 14
     end
     object encrption_key: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 1
+      TabOrder = 3
       TextSettings.Font.Family = 'Roboto'
       TextSettings.Font.Size = 14.000000000000000000
       Position.X = 170.000000000000000000
@@ -247,7 +286,6 @@ object FormMain: TFormMain
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Style, FontColor]
-      OnClick = encrption_keyClick
     end
     object encryption_text: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
@@ -261,7 +299,7 @@ object FormMain: TFormMain
       Size.Width = 313.000000000000000000
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 7
+      TabOrder = 6
       OnClick = encryption_textClick
       Viewport.Width = 309.000000000000000000
       Viewport.Height = 116.000000000000000000
@@ -275,8 +313,8 @@ object FormMain: TFormMain
         Size.Height = 120.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 11
-        Viewport.Width = 313.000000000000000000
-        Viewport.Height = 120.000000000000000000
+        Viewport.Width = 309.000000000000000000
+        Viewport.Height = 116.000000000000000000
       end
     end
     object encryption_encrypted: TMemo
@@ -291,7 +329,7 @@ object FormMain: TFormMain
       Size.Width = 313.000000000000000000
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 8
+      TabOrder = 9
       OnClick = encryption_encryptedClick
       Viewport.Width = 309.000000000000000000
       Viewport.Height = 116.000000000000000000
@@ -299,7 +337,7 @@ object FormMain: TFormMain
     object encryption_clear: TButton
       Position.X = 290.000000000000000000
       Position.Y = 400.000000000000000000
-      TabOrder = 2
+      TabOrder = 10
       Text = 'Clear'
       OnClick = encryption_clearClick
     end
@@ -309,30 +347,69 @@ object FormMain: TFormMain
       Size.Width = 80.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 3
+      TabOrder = 11
       Text = 'Encrypt'
       OnClick = encryptClick
     end
     object encryption_encrypted_copy: TButton
-      Position.X = 65.000000000000000000
+      Position.X = 60.000000000000000000
       Position.Y = 333.000000000000000000
-      TabOrder = 12
+      Size.Width = 50.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
       Text = 'Copy'
       OnClick = encryption_encrypted_copyClick
     end
     object encryption_text_copy: TButton
-      Position.X = 65.000000000000000000
+      Position.X = 60.000000000000000000
       Position.Y = 188.000000000000000000
-      TabOrder = 11
+      Size.Width = 50.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
       Text = 'Copy'
       OnClick = encryption_text_copyClick
     end
     object encrption_key_copy: TButton
-      Position.X = 65.000000000000000000
+      Position.X = 60.000000000000000000
       Position.Y = 43.000000000000000000
-      TabOrder = 10
+      Size.Width = 50.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
       Text = 'Copy'
       OnClick = encrption_key_copyClick
+    end
+    object encrption_key_paste: TButton
+      Position.X = 112.000000000000000000
+      Position.Y = 43.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Paste'
+      OnClick = encrption_key_pasteClick
+    end
+    object encryption_text_paste: TButton
+      Position.X = 112.000000000000000000
+      Position.Y = 188.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Paste'
+      OnClick = encryption_text_pasteClick
+    end
+    object encryption_encrypted_paste: TButton
+      Position.X = 112.000000000000000000
+      Position.Y = 333.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Text = 'Paste'
+      OnClick = encryption_encrypted_pasteClick
     end
   end
 end
