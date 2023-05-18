@@ -1,9 +1,12 @@
 object FormMain: TFormMain
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
   Caption = 'xxtea generator'
   ClientHeight = 600
   ClientWidth = 1000
+  Position = DesktopCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -272,8 +275,8 @@ object FormMain: TFormMain
         Size.Height = 120.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 11
-        Viewport.Width = 309.000000000000000000
-        Viewport.Height = 116.000000000000000000
+        Viewport.Width = 313.000000000000000000
+        Viewport.Height = 120.000000000000000000
       end
     end
     object encryption_encrypted: TMemo
