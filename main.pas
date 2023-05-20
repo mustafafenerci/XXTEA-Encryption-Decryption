@@ -22,7 +22,6 @@ type
     Label4: TLabel;
     encrption_key: TEdit;
     encryption_text: TMemo;
-    Memo3: TMemo;
     encryption_encrypted: TMemo;
     encryption_clear: TButton;
     encrypt: TButton;
@@ -32,7 +31,6 @@ type
     Label8: TLabel;
     decryption_key: TEdit;
     decryption_text: TMemo;
-    Memo5: TMemo;
     decryption_decrypted: TMemo;
     decryption_clear: TButton;
     decrypt: TButton;

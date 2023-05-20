@@ -131,19 +131,6 @@ object FormMain: TFormMain
       OnClick = decryption_textClick
       Viewport.Width = 309.000000000000000000
       Viewport.Height = 116.000000000000000000
-      object Memo5: TMemo
-        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
-        DataDetectorTypes = []
-        TextSettings.WordWrap = True
-        Position.X = 76.000000000000000000
-        Position.Y = 126.000000000000000000
-        Size.Width = 313.000000000000000000
-        Size.Height = 120.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 11
-        Viewport.Width = 313.000000000000000000
-        Viewport.Height = 120.000000000000000000
-      end
     end
     object decryption_decrypted: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
@@ -303,19 +290,6 @@ object FormMain: TFormMain
       OnClick = encryption_textClick
       Viewport.Width = 309.000000000000000000
       Viewport.Height = 116.000000000000000000
-      object Memo3: TMemo
-        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
-        DataDetectorTypes = []
-        TextSettings.WordWrap = True
-        Position.X = 76.000000000000000000
-        Position.Y = 126.000000000000000000
-        Size.Width = 313.000000000000000000
-        Size.Height = 120.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 11
-        Viewport.Width = 309.000000000000000000
-        Viewport.Height = 116.000000000000000000
-      end
     end
     object encryption_encrypted: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
